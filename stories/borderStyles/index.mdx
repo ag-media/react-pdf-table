@@ -1,0 +1,12 @@
+import { Canvas, Story, Meta } from '@storybook/blocks';
+import {Full} from './full.stories';
+import {Inner} from './inner.stories';
+import {Outer} from './outer.stories';
+import {Dashed} from './dashed.stories';
+
+<Meta title="Border Style" />
+
+<Canvas of={Full} />
+<Canvas of={Inner} />
+<Canvas of={Outer} />
+<Canvas of={Dashed} />

@@ -1,0 +1,96 @@
+{
+  "name": "@agmedia/react-pdf-table",
+  "version": "1.0.0",
+  "description": "Provides tables for the @react-pdf/renderer.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "generate-barrels": "barrelsby -d src --delete -e TableRow.tsx",
+    "build": "rm -rf ./lib/* && npm run generate-barrels && tsc && npm run build-storybook && npm run build-doco",
+    "recompile": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o docs",
+    "build-doco": "typedoc --plugin typedoc-plugin-markdown --excludeExternals --out docs/typedoc src"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "firefox 68",
+    "chrome 75",
+    "safari 14",
+    "ios_saf 14",
+    "> 1%",
+    "not ie < 12",
+    "not dead",
+    "not kaios >= 0",
+    "not op_mini all"
+  ],
+  "author": "AG Media",
+  "license": "MIT",
+  "peerDependencies": {
+    "@react-pdf/renderer": "^1.6.8 || ^2.0.0 || ^3.0.0",
+    "react": "^16.8.6 || ^17.0.0",
+    "react-dom": "^16.8.6 || ^17.0.0"
+  },
+  "devDependencies": {
+    "@ag-media/eslint-config": "^1.1.15",
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-proposal-optional-catch-binding": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/plugin-transform-typescript": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@react-hook/resize-observer": "^1.2.6",
+    "@react-pdf/renderer": "^3.0.0",
+    "@react-pdf/stylesheet": "^4.1.7",
+    "@react-pdf/types": "^2.3.3",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@storybook/addon-actions": "^7.0.22",
+    "@storybook/addon-essentials": "^7.0.22",
+    "@storybook/addon-interactions": "^7.0.22",
+    "@storybook/addon-links": "^7.0.22",
+    "@storybook/addon-storysource": "^7.0.22",
+    "@storybook/addons": "^7.0.22",
+    "@storybook/blocks": "^7.0.22",
+    "@storybook/core": "^6.5.16",
+    "@storybook/react": "^7.0.22",
+    "@storybook/react-webpack5": "^7.0.22",
+    "@storybook/testing-library": "^0.1.0",
+    "@types/enzyme": "^3.1.10",
+    "@types/faker": "^4.1.5",
+    "@types/node": "^13.1.8",
+    "@types/sinon": "^4.3.3",
+    "barrelsby": "^2.1.1",
+    "css-loader": "^3.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "faker": "^4.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-pdf": "^7.1.2",
+    "sinon": "^7.3.2",
+    "storybook": "^7.0.22",
+    "storybook-addon-react-docgen": "^1.2.43",
+    "typedoc": "^0.24.0",
+    "typedoc-plugin-markdown": "^3.11.13",
+    "typescript": "^5.1.3"
+  },
+  "resolutions": {
+    "dfa": "1.1.0"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "main.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ag-media/react-pdf-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ag-media/react-pdf-table/issues"
+  },
+  "homepage": "https://github.com/ag-media/react-pdf-table.git#README",
+  "types": "./lib/index.d.ts"
+}
