@@ -17,5 +17,10 @@ const config: StorybookConfig = {
     typescript: {
         reactDocgen: false,
     },
+    webpackFinal: (config) => {
+        config.resolve.fallback.fs = false;
+
+        return config;
+    },
 };
 export default config;
