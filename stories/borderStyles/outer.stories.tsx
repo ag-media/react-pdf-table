@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 
 import {TD, TH, TR, Table} from '../../src';
 import {generateRandomData} from '../common';
-import PDFContainer from '../components/PDFContainer';
+import PDFContainer, {play} from '../components/PDFContainer';
 
 export const Outer = () => {
     const data = useMemo(() => generateRandomData(20), []);
@@ -36,4 +36,5 @@ export const Outer = () => {
 export default {
     title: 'Border Style/Outer',
     component: Table,
+    play,
 };

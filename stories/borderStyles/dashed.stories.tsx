@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 
 import {TD, TH, TR, Table} from '../../src';
 import {generateRandomData} from '../common';
-import PDFContainer from '../components/PDFContainer';
+import PDFContainer, {play} from '../components/PDFContainer';
 
 export const Dashed = () => {
     const data = useMemo(() => generateRandomData(20), []);
@@ -34,4 +34,5 @@ export const Dashed = () => {
 export default {
     title: 'Border Style/Dashed',
     component: Table,
+    play,
 };

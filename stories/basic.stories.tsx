@@ -3,7 +3,7 @@ import React, {useMemo} from 'react';
 import {TD, TH, TR, Table} from '../src';
 
 import {generateRandomData} from './common';
-import PDFContainer from './components/PDFContainer';
+import PDFContainer, {play} from './components/PDFContainer';
 
 export const Basic = () => {
     const data = useMemo(() => generateRandomData(20), []);
@@ -35,4 +35,5 @@ export const Basic = () => {
 export default {
     title: 'Table/Basic',
     component: Table,
+    play,
 };

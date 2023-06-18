@@ -1,5 +1,7 @@
 import {Document, Font, Page, Text, View, pdf} from '@react-pdf/renderer';
 import {PageProps} from '@react-pdf/types';
+import {expect} from '@storybook/jest';
+import {waitFor, within} from '@storybook/testing-library';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {Document as RenderDocument, Page as RenderPage, pdfjs} from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -15,6 +17,15 @@ Font.register({
         {src: 'https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.3/files/roboto-latin-700-normal.woff', fontStyle: 'normal', fontWeight: 700},
     ],
 });
+
+export async function play({canvasElement}) {
+    const canvas = within(canvasElement);
+    await waitFor(() => {
+        expect(canvas.getByTestId('rendered')).toBeInTheDocument();
+    }, {
+        timeout: 3000,
+    });
+}
 
 export default function PDFContainer({
     children,
@@ -78,7 +89,7 @@ export default function PDFContainer({
     }
 
     return (
-        <div key="wrapper" ref={widthRef} style={{width: '100%'}}>
+        <div key="wrapper" ref={widthRef} data-testid="rendered" style={{width: '100%'}}>
             {blobURL ? (
                 <a
                     href={blobURL}

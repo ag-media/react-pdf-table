@@ -1,6 +1,9 @@
 import useResizeObserver from '@react-hook/resize-observer';
+import isChromatic from 'chromatic/isChromatic';
 import * as faker from 'faker';
 import {useLayoutEffect, useState} from 'react';
+
+import staticRandomData from './static-random-data.json';
 
 export interface HumanRow {
     firstName: string,
@@ -16,6 +19,15 @@ export interface HumanRow {
 
 export function generateRandomData(count: number): HumanRow[] {
     const output: HumanRow[] = [];
+
+    if (isChromatic()) {
+        return (
+            staticRandomData.slice(0, count).map(human => ({
+                ...human,
+                dob: new Date(human.dob),
+            })) as HumanRow[]
+        );
+    }
 
     for (let i = 0; i < count; i++) {
         const dob = faker.date.past(100);

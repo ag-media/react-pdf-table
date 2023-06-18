@@ -3,7 +3,7 @@ import React, {useMemo} from 'react';
 import {TD, TH, TR, Table} from '../src';
 
 import {generateRandomData} from './common';
-import PDFContainer from './components/PDFContainer';
+import PDFContainer, {play} from './components/PDFContainer';
 
 export const Weightings = () => {
     const data = useMemo(() => generateRandomData(15), []);
@@ -35,4 +35,5 @@ export const Weightings = () => {
 export default {
     title: 'Table/Weightings',
     component: Table,
+    play,
 };
