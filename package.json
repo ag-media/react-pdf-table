@@ -1,15 +1,11 @@
 {
   "name": "@agmedia/react-pdf-table",
   "version": "1.0.0",
-  "description": "Provides tables for the @react-pdf/renderer.",
-  "main": "./lib/index.js",
+  "description": "Declarative table generator for for the @react-pdf/renderer.",
+  "main": "./dist/index.js",
   "scripts": {
-    "generate-barrels": "barrelsby -d src --delete -e TableRow.tsx",
-    "build": "rm -rf ./lib/* && npm run generate-barrels && tsc && npm run build-storybook && npm run build-doco",
-    "recompile": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o docs",
-    "build-doco": "typedoc --plugin typedoc-plugin-markdown --excludeExternals --out docs/typedoc src"
+    "build-storybook": "storybook build -o docs"
   },
   "browserslist": [
     "last 4 versions",
@@ -76,14 +72,6 @@
     "typedoc-plugin-markdown": "^3.11.13",
     "typescript": "^5.1.3"
   },
-  "resolutions": {
-    "dfa": "1.1.0"
-  },
-  "files": [
-    "lib",
-    "LICENSE",
-    "main.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ag-media/react-pdf-table.git"
@@ -91,6 +79,5 @@
   "bugs": {
     "url": "https://github.com/ag-media/react-pdf-table/issues"
   },
-  "homepage": "https://github.com/ag-media/react-pdf-table.git#README",
-  "types": "./lib/index.d.ts"
+  "homepage": "https://github.com/ag-media/react-pdf-table.git#README"
 }
