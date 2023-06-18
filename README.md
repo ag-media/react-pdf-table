@@ -3,7 +3,7 @@
 `@ag-media/react-pdf-table` is a declarative table generator for [@react-pdf/renderer](https://github.com/diegomura/react-pdf).
 
 > **Warning** <br />
-> The library is specifically design for use with **@react-pdf/renderer** and will
+> The library is specifically designed for use with **@react-pdf/renderer** and will
 > **not work** with other react renderers.
 
 [![npm version](http://img.shields.io/npm/v/@ag-media/react-pdf-table.svg?style=flat)](https://npmjs.org/package/@ag-media/react-pdf-table "View this project on npm")
