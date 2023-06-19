@@ -1,6 +1,6 @@
 import useResizeObserver from '@react-hook/resize-observer';
 import isChromatic from 'chromatic/isChromatic';
-import * as faker from 'faker';
+import faker from 'faker';
 import {useLayoutEffect, useState} from 'react';
 
 import staticRandomData from './static-random-data.json';
