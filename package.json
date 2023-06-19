@@ -66,6 +66,7 @@
     "chromatic": "^6.19.8",
     "eslint-import-resolver-typescript": "^3.5.5",
     "faker": "^4.1.0",
+    "react-pdf": "^7.1.2",
     "rollup": "^3.25.1",
     "storybook": "^7.0.22",
     "typescript": "^5.1.3"
