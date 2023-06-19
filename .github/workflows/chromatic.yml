@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install
-        run: npm install react@${{ matrix.react }} react-dom@${{ matrix.react }} @react-pdf/renderer${{ matrix.reactpdf }}
+        run: npm install react@${{ matrix.react }} react-dom@${{ matrix.react }} @react-pdf/renderer@${{ matrix.reactpdf }}
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
