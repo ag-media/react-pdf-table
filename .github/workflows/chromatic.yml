@@ -10,9 +10,6 @@ jobs:
       matrix:
         react: [16] # , 17, 18
         reactpdf: [2, 3]
-        exclude:
-          - react: 18
-            reactpdf: 1
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3

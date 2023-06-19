@@ -1,4 +1,4 @@
-import {Document, Font, Page, Text, View, pdf} from '@react-pdf/renderer';
+import {Document, Page, Text, View, pdf} from '@react-pdf/renderer';
 import {PageProps} from '@react-pdf/types';
 import {expect} from '@storybook/jest';
 import {waitFor, within} from '@storybook/testing-library';
@@ -10,13 +10,6 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {useSize} from '../common';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-Font.register({
-    family: 'Roboto',
-    fonts: [
-        {src: 'https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.3/files/roboto-latin-400-normal.woff', fontStyle: 'normal', fontWeight: 400},
-        {src: 'https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.3/files/roboto-latin-700-normal.woff', fontStyle: 'normal', fontWeight: 700},
-    ],
-});
 
 export async function play({canvasElement}) {
     const canvas = within(canvasElement);
@@ -50,7 +43,6 @@ export default function PDFContainer({
                         orientation={orientation || 'landscape'}
                         size={size || 'A4'}
                         style={{
-                            fontFamily: 'Roboto',
                             fontSize: '12px',
                             margin: '40px',
                             paddingRight: '80px',
