@@ -7,13 +7,15 @@ jobs:
   chromatic:
     strategy:
       matrix:
-        reactpdf: [1, 2, 3]
         react: [16, 17, 18]
+        reactpdf: [1, 2, 3]
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: clean
+        run: rm -rf node_modules package-lock.json
       - name: Install
         run: npm install react@${{ matrix.react }} react-dom@${{ matrix.react }} @react-pdf/renderer@${{ matrix.reactpdf }}
       - name: Publish to Chromatic
