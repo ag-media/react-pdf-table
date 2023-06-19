@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        react: [16] # , 17, 18
+        react: [16, 17, 18]
         reactpdf: [2, 3]
     runs-on: self-hosted
     steps:
