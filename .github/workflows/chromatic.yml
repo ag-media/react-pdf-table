@@ -5,14 +5,18 @@ on:
 
 jobs:
   chromatic:
+    strategy:
+      matrix:
+        reactpdf: [1, 2, 3]
+        react: [16, 17, 18]
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Install
-        run: npm ci --no-optional
+        run: npm install react@${{ matrix.react }} react-dom@${{ matrix.react }} @react-pdf/renderer${{ matrix.reactpdf }}
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ secrets[format('CHROMATIC_PROJECT_TOKEN_react{0}_pdf{1}', matrix.react, matrix.reactpdf)] }}
