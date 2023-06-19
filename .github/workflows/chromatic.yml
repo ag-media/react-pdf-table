@@ -6,6 +6,7 @@ on:
 jobs:
   chromatic:
     strategy:
+      fail-fast: false
       matrix:
         react: [16, 17, 18]
         reactpdf: [1, 2, 3]
