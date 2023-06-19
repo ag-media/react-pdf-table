@@ -29,11 +29,11 @@ export default function TableCell({
 
         const flattenChildren = (elem: typeof children) => {
             React.Children.forEach(elem, (child) => {
-                if (child?.type === React.Fragment) {
+                if (React.isValidElement(child) && child?.type === React.Fragment) {
                     flattenChildren((child.props as {children?: React.ReactNode}).children);
                 }
                 else {
-                    output.push(child);
+                    output.push(child as JSX.Element);
                 }
             });
         };

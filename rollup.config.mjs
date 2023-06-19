@@ -11,6 +11,7 @@ export default [
             format: 'cjs',
             sourcemap: true,
         },
+        external: ['@react-pdf/renderer', '@react-pdf/stylesheet', 'react'],
         plugins: [
             typescript({
                 outDir: 'lib',
@@ -27,6 +28,7 @@ export default [
             format: 'es',
             sourcemap: true,
         },
+        external: ['@react-pdf/renderer', '@react-pdf/stylesheet', 'react'],
         plugins: [
             typescript({
                 outDir: 'lib',
