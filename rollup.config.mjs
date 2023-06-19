@@ -1,40 +1,37 @@
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 export default [
     {
         input: {
-            index: 'src/index.ts',
-            rtdb: 'src/rtdb.ts',
-            rematch: 'src/rematch.ts',
-            functions: 'src/functions.ts',
+            'index.cjs': 'src/index.ts',
         },
         output: {
-            dir: 'dist',
+            dir: 'lib',
             format: 'cjs',
             sourcemap: true,
         },
         plugins: [
             typescript({
-                outDir: 'dist',
+                outDir: 'lib',
             }),
+            terser(),
         ],
     },
     {
         input: {
-            index: 'src/index.ts',
-            rtdb: 'src/rtdb.ts',
-            rematch: 'src/rematch.ts',
-            functions: 'src/functions.ts',
+            'index.esm': 'src/index.ts',
         },
         output: {
-            dir: 'dist',
+            dir: 'lib',
             format: 'es',
             sourcemap: true,
         },
         plugins: [
             typescript({
-                outDir: 'dist',
+                outDir: 'lib',
             }),
+            terser(),
         ],
     },
 ];

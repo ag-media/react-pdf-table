@@ -1,25 +1,29 @@
 {
   "compilerOptions": {
+    "importHelpers": true,
     "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "removeComments": true,
+    "noEmit": true,
+    "module": "ES6",
     "lib": [
       "es6",
-      "dom",
-      "es7"
+      "dom"
     ],
-    "module": "commonjs",
-    "sourceMap": true,
-    "inlineSources": true,
     "jsx": "react",
     "target": "ES2015",
     "outDir": "./lib",
-    "removeComments": true,
-    "strict": false,
-    "rootDirs": ["src", "stories"],
+    "rootDirs": ["src"],
     "baseUrl": "src",
-    "skipLibCheck": true
   },
   "include": [
     "./src/**/*.tsx",
@@ -27,9 +31,5 @@
   ],
   "exclude": [
     "./node_modules/**/*",
-    "./src/**/*.spec.tsx",
-    "./src/**/*.spec.ts",
-    "./src/**/__mocks__/**/*",
-    "./src/**/__tests__/**/*"
   ]
 }

@@ -1,12 +1,16 @@
 {
-  "name": "@agmedia/react-pdf-table",
+  "name": "@ag-media/react-pdf-table",
   "version": "1.0.0",
   "description": "Declarative table generator for for the @react-pdf/renderer.",
-  "main": "./dist/index.js",
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.esm.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
+    "build": "rm -rf lib; rollup -c ./rollup.config.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o docs"
   },
+  "sideEffects": false,
   "browserslist": [
     "last 4 versions",
     "firefox 68",
@@ -23,6 +27,12 @@
     "name": "AG Media"
   },
   "license": "MIT",
+  "files": [
+    "lib",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
   "peerDependencies": {
     "@react-pdf/renderer": "^1.6.8 || ^2.0.0 || ^3.0.0",
     "react": "^16.8.6 || ^17.0.0",
@@ -41,6 +51,7 @@
     "@react-pdf/renderer": "^3.0.0",
     "@react-pdf/stylesheet": "^4.1.7",
     "@react-pdf/types": "^2.3.3",
+    "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.1",
     "@storybook/addon-essentials": "^7.0.22",
     "@storybook/addons": "^7.0.22",
@@ -58,6 +69,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-pdf": "^7.1.2",
+    "rollup": "^3.25.1",
     "storybook": "^7.0.22",
     "typescript": "^5.1.3"
   },
