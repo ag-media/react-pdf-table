@@ -45,7 +45,7 @@ Refer to the repo's [Storybook](https://ag-media.github.io/react-pdf-table) for 
 While this library covers the usual table layouts, it's not a complete or
 bullet-proof solution. Because not all layouts are 100% achievable with the
 current react-pdf primitives, the table components need to be implemented in
-react-pdf (**[upvote this issue](https://github.com/diegomura/react-pdf/issues/2015)**).
+react-pdf (**[upvote this issue](https://github.com/diegomura/react-pdf/issues/2343)**).
 
 ## Notes
 
