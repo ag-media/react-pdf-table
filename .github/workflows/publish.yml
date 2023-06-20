@@ -1,4 +1,4 @@
-name: Deploy storybook to Pages
+name: Deploy
 
 on:
   push:
