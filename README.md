@@ -8,6 +8,8 @@
 
 [![npm version](http://img.shields.io/npm/v/@ag-media/react-pdf-table.svg?style=flat)](https://npmjs.org/package/@ag-media/react-pdf-table "View this project on npm")
 
+![example](.github/assets/readme-example.webp)
+
 ## Getting started
 
 ```bash
@@ -72,7 +74,7 @@ a row to be smaller than the table.
 ## Limitations / Known issues
 
 - page wrapping may happen in unexpected ways:
-    ![example](.github/assets/broken-page-wrap.png)
+    ![example](.github/assets/broken-page-wrap.webp)
 - flex layout is used to simulate how a table looks. Because of this, it's
     trivial to make columns not line up.
 - border collapse
