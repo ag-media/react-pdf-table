@@ -19,7 +19,7 @@ npm install --save-dev @ag-media/react-pdf-table
 ### Basic example
 
 ```jsx
-import {Table, TR, TH, TD} from '@ag-media/react-pdf-table`;
+import {Table, TR, TH, TD} from '@ag-media/react-pdf-table';
 
 const Component = () => (
     <Table>
