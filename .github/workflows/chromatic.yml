@@ -9,10 +9,12 @@ jobs:
       fail-fast: false
       matrix:
         react: [16, 17, 18]
-        reactpdf: [2, 3]
+        reactpdf: [2, 3, 4]
         exclude:
           - react: 18
             reactpdf: 2
+          - react: 16
+            reactpdf: 4
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
