@@ -10,6 +10,7 @@ export default [
             dir: 'lib',
             format: 'cjs',
             sourcemap: true,
+            entryFileNames: '[name].js',
         },
         external: ['@react-pdf/renderer', '@react-pdf/stylesheet', 'react'],
         plugins: [
@@ -27,6 +28,7 @@ export default [
             dir: 'lib',
             format: 'es',
             sourcemap: true,
+            entryFileNames: '[name].mjs',
         },
         external: ['@react-pdf/renderer', '@react-pdf/stylesheet', 'react'],
         plugins: [

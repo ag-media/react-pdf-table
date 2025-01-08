@@ -3,8 +3,14 @@
   "version": "2.0.0",
   "description": "Declarative table generator for for the @react-pdf/renderer.",
   "main": "./lib/index.cjs.js",
-  "module": "./lib/index.esm.js",
+  "module": "./lib/index.esm.mjs",
   "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.esm.mjs",
+      "require": "./lib/index.cjs.js"
+    }
+  },
   "scripts": {
     "build": "rm -rf lib; rollup -c ./rollup.config.mjs",
     "storybook": "storybook dev -p 6006",
