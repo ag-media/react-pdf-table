@@ -37,7 +37,7 @@ export default function Table({
         const style = flatten([
             {
                 borderColor: '#000000',
-                borderWidth: 1,
+                borderWidth: '1px',
                 borderStyle: 'solid',
             },
             ...(Array.isArray(styleProps) ? styleProps : [styleProps]),
@@ -96,7 +96,7 @@ export default function Table({
         },
         ...(Array.isArray(styleProps) ? styleProps : [styleProps]),
         tableStyle.borderStyle === 'solid' ? {
-            border: 0,
+            border: '0px',
         } : undefined,
     ].filter(Boolean), [styleProps]);
 
